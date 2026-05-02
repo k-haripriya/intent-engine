@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react';
-
-import { View } from 'react-native';
 import { startTriggerEngine } from './src/core/engine/triggerEngine';
-import WalkThroughScreen from './src/features/workflow/screens/walkThroughScreen/WalkThroughScreen';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import RootNavigator from './src/navigation/Stacknavigator';
+import { ThemeProvider } from './src/context/ThemeProvider';
 
 const App = () => {
   useEffect(() => {
@@ -11,9 +10,9 @@ const App = () => {
   }, []);
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <View style={{ flex: 1 }}>
-        <WalkThroughScreen />
-      </View>
+      <ThemeProvider>
+        <RootNavigator />
+      </ThemeProvider>
     </GestureHandlerRootView>
   );
 };
