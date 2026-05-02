@@ -48,7 +48,7 @@ const DATA = [
   },
 ];
 
-const LiquidSwipe = () => {
+const WalkthroughScreen = () => {
   const { width, height } = useWindowDimensions();
   const [index, setIndex] = useState(0);
 
@@ -281,4 +281,4 @@ const LiquidSwipe = () => {
   );
 };
 
-export default LiquidSwipe;
+export default WalkthroughScreen;
