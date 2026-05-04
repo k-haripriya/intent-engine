@@ -7,6 +7,5 @@ export const createStyles = (colors: ThemeColors) =>
     container: {
       ...commonStyles.flex1,
       backgroundColor: colors.primary,
-      ...commonStyles.center,
     },
   });
