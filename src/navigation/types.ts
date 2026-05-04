@@ -1,4 +1,8 @@
 export type RootStackParamList = {
   Walkthrough: undefined;
-  Home: undefined;
+  HomeDrawer: undefined;
+};
+
+export type DrawerParamList = {
+  HomeScreen: undefined;
 };

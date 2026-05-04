@@ -4,7 +4,7 @@ import { RootStackParamList } from './types';
 import { ROUTES } from './routes';
 import { NavigationContainer } from '@react-navigation/native';
 import WalkthroughScreen from '../screens/walkThroughScreen/WalkThroughScreen';
-import HomeScreeen from '../screens/homeScreen/HomeScreeen';
+import DrawerNavigator from './drawerNavigation/Drawernavigator';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -16,10 +16,10 @@ const RootNavigator = () => {
           headerShown: false,
           animation: 'fade',
         }}
-        initialRouteName={ROUTES.HOME}
+        initialRouteName={ROUTES.HOMEDRAWER}
       >
         <Stack.Screen name={ROUTES.WALKTHROUGH} component={WalkthroughScreen} />
-        <Stack.Screen name={ROUTES.HOME} component={HomeScreeen} />
+        <Stack.Screen name={ROUTES.HOMEDRAWER} component={DrawerNavigator} />
       </Stack.Navigator>
     </NavigationContainer>
   );

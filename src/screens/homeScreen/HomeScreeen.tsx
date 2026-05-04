@@ -7,16 +7,26 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import SettingsIcon from '../../assets/icons/Settings.svg';
 import Dimensions from '../../theme/Dimensions';
 import { useTranslation } from 'react-i18next';
+import { DrawerNavigationProp } from '@react-navigation/drawer';
+import { useNavigation } from '@react-navigation/native';
+import { DrawerParamList } from '../../navigation/types';
+
+type DrawerNav = DrawerNavigationProp<DrawerParamList, 'HomeScreen'>;
 
 const HomeScreeen = () => {
   const { colors, toggleTheme } = useTheme();
+  const navigation = useNavigation<DrawerNav>();
   const styles = useMemo(() => createStyles(colors), [colors]);
   const insets = useSafeAreaInsets();
   const { t } = useTranslation();
 
+  const openDrawer = () => {
+    navigation.openDrawer();
+  };
+
   const renderSettingsIcon = () => {
     return (
-      <TouchableOpacity onPress={toggleTheme}>
+      <TouchableOpacity onPress={openDrawer}>
         <SettingsIcon
           height={Dimensions.n(20)}
           width={Dimensions.n(20)}

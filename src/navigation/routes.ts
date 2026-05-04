@@ -1,4 +1,8 @@
 export const ROUTES = {
   WALKTHROUGH: 'Walkthrough',
-  HOME: 'Home',
+  HOMEDRAWER: 'HomeDrawer',
+} as const;
+
+export const DRAWER_ROUTES = {
+  HOMESCREEN: 'HomeScreen',
 } as const;
