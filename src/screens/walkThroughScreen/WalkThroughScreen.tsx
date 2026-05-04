@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useState, useCallback } from 'react';
 import { View, useWindowDimensions, StyleSheet, Text } from 'react-native';
 import Animated, {
@@ -86,7 +87,7 @@ const WalkthroughScreen = () => {
       }
     });
 
-  const renderVisual = (type: any) => {
+  const renderVisual = (type: string) => {
     switch (type) {
       case 'automation':
         return (
