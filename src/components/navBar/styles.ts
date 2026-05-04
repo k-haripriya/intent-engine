@@ -19,11 +19,13 @@ export const createStyles = (Colors: ThemeColors) =>
     },
     subTitle: {
       color: Colors.primaryText,
-      fontSize: Dimensions.n(14),
+      fontSize: Dimensions.n(12),
+      marginTop: Dimensions.nn(5),
+      width: Dimensions.n(250),
     },
     title: {
       color: Colors.primaryText,
-      fontSize: Dimensions.n(20),
+      fontSize: Dimensions.n(18),
       fontWeight: 'bold',
     },
   });

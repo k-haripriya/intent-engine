@@ -6,11 +6,13 @@ import NavBar from '../../components/navBar/NavBar';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import SettingsIcon from '../../assets/icons/Settings.svg';
 import Dimensions from '../../theme/Dimensions';
+import { useTranslation } from 'react-i18next';
 
 const HomeScreeen = () => {
   const { colors, toggleTheme } = useTheme();
   const styles = useMemo(() => createStyles(colors), [colors]);
   const insets = useSafeAreaInsets();
+  const { t } = useTranslation();
 
   const renderSettingsIcon = () => {
     return (
@@ -27,8 +29,8 @@ const HomeScreeen = () => {
     <View style={[styles.container, { paddingTop: insets.top }]}>
       <NavBar
         shouldShowBackArrow={false}
-        title="Hi Haripriya"
-        subTitle="Welcome to Dynamo"
+        title={t('home.greeting')}
+        subTitle={t('home.subtitle')}
         rightContent={renderSettingsIcon()}
       />
     </View>

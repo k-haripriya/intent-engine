@@ -5,6 +5,7 @@ import RootNavigator from './src/navigation/Stacknavigator';
 import { ThemeProvider } from './src/context/ThemeProvider';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { commonStyles } from './src/styles/common';
+import './src/localization/i18n';
 
 const App = () => {
   useEffect(() => {
