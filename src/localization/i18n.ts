@@ -4,10 +4,12 @@ import * as RNLocalize from 'react-native-localize';
 
 import en from './en.json';
 import ta from './ta.json';
+import hi from './hi.json';
 
 const resources = {
   en: { translation: en },
   ta: { translation: ta },
+  hi: { translation: hi },
 };
 
 const getDeviceLanguage = () => {

@@ -6,6 +6,10 @@ export const commonStyles = StyleSheet.create({
     justifyContent: 'center',
   },
   flex1: { flex: 1 },
+  flexRow: {
+    alignItems: 'center',
+    flexDirection: 'row',
+  },
   flexStart: { alignItems: 'flex-start' },
   rowBetween: {
     alignItems: 'center',

@@ -2,5 +2,19 @@
   "home": {
     "greeting": "Welcome",
     "subtitle": "Make your life easier with Dynamo"
+  },
+  "settings": {
+    "title": "Quick Settings",
+    "subtitle": "Manage your preferences and customize your experience",
+    "theme": "Theme",
+    "themeSubtitle": "Switch between light and dark mode",
+    "language": "Language",
+    "dark": "Dark",
+    "light": "Light"
+  },
+  "language": {
+    "english": "English",
+    "tamil": "Tamil",
+    "hindi": "Hindi"
   }
 }
