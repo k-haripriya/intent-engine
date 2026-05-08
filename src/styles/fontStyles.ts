@@ -7,6 +7,7 @@ export const getFont = (font: string, size: number) => {
 
 const FontStyles = StyleSheet.create({
   montserratB14: getFont(fonts.MONTSERRAT_BOLD, 14),
+  montserratB16: getFont(fonts.MONTSERRAT_BOLD, 16),
   montserratEB12: getFont(fonts.MONTSERRAT_EXTRA_BOLD, 12),
   montserratM10: getFont(fonts.MONTSERRAT_MEDIUM, 10),
   montserratSB12: getFont(fonts.MONTSERRAT_SEMIBOLD, 12),

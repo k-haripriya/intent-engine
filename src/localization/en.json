@@ -16,5 +16,8 @@
     "english": "English",
     "tamil": "Tamil",
     "hindi": "Hindi"
+  },
+  "login": {
+    "signup": "Sign Up"
   }
 }

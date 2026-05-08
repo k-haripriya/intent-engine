@@ -5,6 +5,7 @@ import { ROUTES } from './routes';
 import { NavigationContainer } from '@react-navigation/native';
 import WalkthroughScreen from '../screens/walkThroughScreen/WalkThroughScreen';
 import DrawerNavigator from './drawerNavigation/Drawernavigator';
+import LoginScreen from '../screens/loginScreen/LoginScreen';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -16,10 +17,11 @@ const RootNavigator = () => {
           headerShown: false,
           animation: 'fade',
         }}
-        initialRouteName={ROUTES.HOMEDRAWER}
+        initialRouteName={ROUTES.LOGIN}
       >
         <Stack.Screen name={ROUTES.WALKTHROUGH} component={WalkthroughScreen} />
         <Stack.Screen name={ROUTES.HOMEDRAWER} component={DrawerNavigator} />
+        <Stack.Screen name={ROUTES.LOGIN} component={LoginScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
