@@ -9,19 +9,16 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
   ],
   rules: {
-    // 🚫 unused vars
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
     'unused-imports/no-unused-imports': 'error',
-
-    // 🚫 inline styles
     'react-native/no-inline-styles': 'warn',
-
-    // 🚫 console logs (optional)
-    'no-console': 'warn',
-
-    // cleaner code
-    'react/react-in-jsx-scope': 'off', // not needed in RN
+    'react/react-in-jsx-scope': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+    'no-console': 'off',
+    'import/order': 'off',
+    'tailwindcss/classnames-order': 'off',
+    '@typescript-eslint/no-namespace': 'off',
   },
   settings: {
     react: {

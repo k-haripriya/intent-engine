@@ -6,6 +6,7 @@ import { ThemeProvider } from './src/context/ThemeProvider';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { commonStyles } from './src/styles/common';
 import './src/localization/i18n';
+import './src/api';
 
 const App = () => {
   useEffect(() => {

@@ -5,6 +5,8 @@ import { createStyles } from './styles';
 import { useTranslation } from 'react-i18next';
 import InputField from '../../components/inputField/InputField';
 import RoundedButton from '../../components/RoundedButton/RoundedButton';
+import { RequestTypes } from '../../api/requestTypes';
+import { AuthService } from '../../api/service/authService';
 
 const LoginScreen = () => {
   const { colors } = useTheme();
@@ -27,6 +29,22 @@ const LoginScreen = () => {
       placeHolder: 'Enter Password',
     },
   ];
+
+  const handleLogin = async () => {
+    try {
+      const loginRequest: RequestTypes.LoginRequest = {
+        username: email,
+        password,
+      };
+      console.log(loginRequest);
+      const response = await AuthService.login(loginRequest);
+      console.log(response);
+    } catch (error) {
+      console.log('error', error);
+    } finally {
+      console.log('finally');
+    }
+  };
   return (
     <View style={styles.container}>
       <View style={styles.card}>
@@ -40,7 +58,7 @@ const LoginScreen = () => {
             placeholder={field.placeHolder}
           />
         ))}
-        <RoundedButton title="Sign In" onPress={() => {}} />
+        <RoundedButton title="Sign In" onPress={handleLogin} />
       </View>
     </View>
   );
