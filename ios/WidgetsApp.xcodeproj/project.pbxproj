@@ -29,6 +29,7 @@
 		6033D9B479F5433184CA6385 /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3C75679B051402189E24669 /* Montserrat-Italic.ttf */; };
 		30A270609A604106BE2A02A6 /* Montserrat-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 182F01720E374BCA93B2D064 /* Montserrat-SemiBoldItalic.ttf */; };
 		596D31CB7CEF436398924477 /* Montserrat-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DEA29A8D50C8473898B94CAB /* Montserrat-ExtraBoldItalic.ttf */; };
+		82F116EF1684455CA5A7356F /* Courgette-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C23DA42080C4370A187E5EE /* Courgette-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		E3C75679B051402189E24669 /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; name = "Montserrat-Italic.ttf"; path = "../src/assets/fonts/Montserrat-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		182F01720E374BCA93B2D064 /* Montserrat-SemiBoldItalic.ttf */ = {isa = PBXFileReference; name = "Montserrat-SemiBoldItalic.ttf"; path = "../src/assets/fonts/Montserrat-SemiBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		DEA29A8D50C8473898B94CAB /* Montserrat-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; name = "Montserrat-ExtraBoldItalic.ttf"; path = "../src/assets/fonts/Montserrat-ExtraBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4C23DA42080C4370A187E5EE /* Courgette-Regular.ttf */ = {isa = PBXFileReference; name = "Courgette-Regular.ttf"; path = "../src/assets/fonts/Courgette-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 				E3C75679B051402189E24669 /* Montserrat-Italic.ttf */,
 				182F01720E374BCA93B2D064 /* Montserrat-SemiBoldItalic.ttf */,
 				DEA29A8D50C8473898B94CAB /* Montserrat-ExtraBoldItalic.ttf */,
+				4C23DA42080C4370A187E5EE /* Courgette-Regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				6033D9B479F5433184CA6385 /* Montserrat-Italic.ttf in Resources */,
 				30A270609A604106BE2A02A6 /* Montserrat-SemiBoldItalic.ttf in Resources */,
 				596D31CB7CEF436398924477 /* Montserrat-ExtraBoldItalic.ttf in Resources */,
+				82F116EF1684455CA5A7356F /* Courgette-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

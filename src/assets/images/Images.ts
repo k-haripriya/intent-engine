@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 export const Images = {
-  // loginBg: require('./loginBg.png'),
+  logo: require('./logo.png'),
 };

@@ -33,6 +33,7 @@ export default {
   MONTSERRAT_EXTRA_BOLD_ITALIC: 'Montserrat-ExtraBoldItalic',
   MONTSERRAT_BLACK: 'Montserrat-Black',
   MONTSERRAT_BLACK_ITALIC: 'Montserrat-BlackItalic',
+  COURGETTE: 'Courgette-Regular',
   fontSize: normalize,
   n: normalize,
   nn: normalizeNew,

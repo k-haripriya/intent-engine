@@ -2,6 +2,10 @@
   "migIndex": 1,
   "data": [
     {
+      "path": "src/assets/fonts/Courgette-Regular.ttf",
+      "sha1": "0e6826b92f8f80fe2eb803bdef7d81355845e283"
+    },
+    {
       "path": "src/assets/fonts/Montserrat-Black.ttf",
       "sha1": "e9abe094b65469f6b6a373b543ab7030dc145c7c"
     },

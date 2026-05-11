@@ -9,24 +9,82 @@ export const createStyles = (colors: ThemeColors) =>
   StyleSheet.create({
     card: {
       backgroundColor: colors.primary,
-      borderColor: colors.borderColor,
-      borderRadius: Dimensions.n(10),
-      borderWidth: Dimensions.n(1),
-      elevation: Dimensions.n(2),
       gap: SPACING.LG,
       padding: Dimensions.n(20),
-      shadowColor: colors.primaryText,
       width: Dimensions.n(300),
+      marginTop: Dimensions.n(120),
+      alignSelf: 'center',
     },
     container: {
       backgroundColor: colors.primary,
       flex: 1,
-      ...commonStyles.center,
+      padding: SPACING.MD,
+      justifyContent: 'space-between',
     },
     title: {
       color: colors.primaryText,
-      fontWeight: 'bold',
-      ...FontStyles.montserratB16,
+      ...FontStyles.CourgetteR16,
       textAlign: 'center',
+    },
+    loginIcon: {
+      ...commonStyles.flexRow,
+      alignItems: 'center',
+      gap: SPACING.SM,
+    },
+    loginText: {
+      color: colors.primary,
+      ...FontStyles.montserratSB12,
+      textAlign: 'center',
+      marginTop: SPACING.MD,
+    },
+    welcomeText: {
+      textAlign: 'center',
+      marginTop: SPACING.XL,
+      color: colors.logo,
+      ...FontStyles.CourgetteR26,
+    },
+    loginSubText: {
+      color: colors.primaryText,
+      ...FontStyles.montserratM10,
+      textAlign: 'center',
+      alignSelf: 'center',
+      lineHeight: SPACING.MD,
+    },
+    width180: {
+      width: Dimensions.n(180),
+    },
+    bottomView: {
+      ...commonStyles.center,
+    },
+    orText: {
+      color: colors.primaryText,
+      ...FontStyles.montserratM10,
+      textAlign: 'center',
+      // width: Dimensions.n(180),
+      alignSelf: 'center',
+      marginBottom: SPACING.MD,
+    },
+    googleView: {
+      ...commonStyles.flexRow,
+      ...commonStyles.center,
+    },
+    googleText: {
+      color: colors.primaryText,
+      ...FontStyles.montserratSB12,
+      marginLeft: SPACING.SM,
+    },
+    loginView: {
+      ...commonStyles.flexRow,
+      alignItems: 'center',
+      gap: SPACING.SM,
+      justifyContent: 'center',
+    },
+    loginBtn: {
+      borderBottomWidth: Dimensions.n(1),
+      borderBottomColor: colors.primaryText,
+    },
+    loginBtnText: {
+      color: colors.primaryText,
+      ...FontStyles.montserratSB12,
     },
   });

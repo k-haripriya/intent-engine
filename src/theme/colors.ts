@@ -7,6 +7,7 @@ export const lightColors = {
   secondary: '#1b1b1b',
   error: '#ff5f5f',
   button: '#1b1b1b',
+  logo: '#a00000',
 };
 export const darkColors = {
   primary: '#1b1b1b',
@@ -17,6 +18,7 @@ export const darkColors = {
   secondary: '#f7f7f7',
   error: '#ff5f5f',
   button: '#f7f7f7',
+  logo: '#a00000',
 };
 
 export type ThemeColors = typeof lightColors;

@@ -1,6 +1,12 @@
 export declare namespace RequestTypes {
   interface LoginRequest {
-    username: string;
+    email: string;
     password: string;
+  }
+
+  interface RegisterRequest {
+    email: string;
+    password: string;
+    username: string;
   }
 }

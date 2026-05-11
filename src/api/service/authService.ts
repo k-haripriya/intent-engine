@@ -13,6 +13,17 @@ const login = async (
   return response.data;
 };
 
+const register = async (
+  data: RequestTypes.RegisterRequest,
+): Promise<ResponseTypes.RegisterResponse> => {
+  const response = await apiClient.post<ResponseTypes.RegisterResponse>(
+    ENDPOINTS.AUTH.REGISTER,
+    data,
+  );
+  return response.data;
+};
+
 export const AuthService = {
   login,
+  register,
 };

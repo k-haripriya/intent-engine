@@ -1,5 +1,25 @@
 export declare namespace ResponseTypes {
   export type LoginResponse = {
-    token: string;
+    tokens: {
+      access: string;
+      refresh: string;
+    };
+    user: {
+      id: number;
+      username: string;
+      email: string;
+    };
+  };
+
+  export type RegisterResponse = {
+    tokens: {
+      access: string;
+      refresh: string;
+    };
+    user: {
+      id: number;
+      username: string;
+      email: string;
+    };
   };
 }

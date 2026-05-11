@@ -18,6 +18,21 @@
     "hindi": "Hindi"
   },
   "login": {
-    "signup": "Sign Up"
+    "welcome": "Welcome To Dynamo",
+    "loginAndContinue": "Login / Sign Up to continue",
+    "signup": "Sign Up",
+    "login": "Login",
+    "enterRegisteredDet": "Please enter your registered email and password",
+    "enterDetails": "Please enter the below details to continue",
+    "alreadyHaveAccount": "Already have an account?",
+    "dontHaveAccount": "Don't have an account?",
+    "email": "Email",
+    "password": "Password",
+    "username": "Username",
+    "enter": "Enter",
+    "continueWithGoogle": "Continue with Google"
+  },
+  "loader": {
+    "loading": "Loading..."
   }
 }

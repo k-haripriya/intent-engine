@@ -19,6 +19,7 @@ module.exports = {
     'import/order': 'off',
     'tailwindcss/classnames-order': 'off',
     '@typescript-eslint/no-namespace': 'off',
+    'react-native/sort-styles': 'off',
   },
   settings: {
     react: {
