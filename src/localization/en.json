@@ -1,6 +1,6 @@
 {
   "home": {
-    "greeting": "Welcome",
+    "greeting": "Welcome {{name}}",
     "subtitle": "Make your life easier with Dynamo"
   },
   "settings": {
@@ -34,5 +34,33 @@
   },
   "loader": {
     "loading": "Loading..."
+  },
+  "cards": {
+    "birthday": {
+      "title": "Birthday Reminders",
+      "subtitle": "Never miss a special day again"
+    },
+    "task": {
+      "title": "Tasks Scheduler",
+      "subtitle": "Organize tasks and get things done"
+    },
+    "workflow": {
+      "title": "WorkFlow Scheduler",
+      "subtitle": "Automate workflows and stay consistent"
+    },
+    "meeting": {
+      "title": "Meeting Scheduler",
+      "subtitle": "Schedule meetings easier and efficiently"
+    },
+    "travel": {
+      "title": "Travel Reminders",
+      "subtitle": "Plan trips and get timely reminders"
+    },
+    "next": "Next",
+    "today": "Today",
+    "todo": "To Do",
+    "total": "Total",
+    "active": "Active",
+    "trips": "Trips"
   }
 }

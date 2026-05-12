@@ -21,4 +21,17 @@ export const darkColors = {
   logo: '#a00000',
 };
 
+export const commonColors = {
+  white: '#fff',
+  whitebg: 'rgba(255,255,255,0.3)',
+};
+
+export const gradientColors = {
+  birthdayCard: ['#FF6B8A', '#FF8E53'],
+  taskCard: ['#4A90E2', '#357ABD'],
+  workflowCard: ['#2ECC71', '#00C9A7'],
+  meetingCard: ['#7F7FD5', '#86A8E7'],
+  travelCard: ['#FFD200', '#F7971E'],
+};
+
 export type ThemeColors = typeof lightColors;

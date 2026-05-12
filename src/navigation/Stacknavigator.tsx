@@ -17,7 +17,7 @@ const RootNavigator = () => {
           headerShown: false,
           animation: 'fade',
         }}
-        initialRouteName={ROUTES.LOGIN}
+        initialRouteName={ROUTES.HOMEDRAWER}
       >
         <Stack.Screen name={ROUTES.WALKTHROUGH} component={WalkthroughScreen} />
         <Stack.Screen name={ROUTES.HOMEDRAWER} component={DrawerNavigator} />

@@ -13,6 +13,8 @@ const FontStyles = StyleSheet.create({
   montserratSB12: getFont(fonts.MONTSERRAT_SEMIBOLD, 12),
   CourgetteR26: getFont(fonts.COURGETTE, 26),
   CourgetteR16: getFont(fonts.COURGETTE, 16),
+  montserratM8: getFont(fonts.MONTSERRAT_MEDIUM, 8),
+  montserratB10: getFont(fonts.MONTSERRAT_BOLD, 10),
 });
 
 export default FontStyles;

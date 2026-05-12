@@ -20,6 +20,7 @@ module.exports = {
     'tailwindcss/classnames-order': 'off',
     '@typescript-eslint/no-namespace': 'off',
     'react-native/sort-styles': 'off',
+    'react/prop-types': 'off',
   },
   settings: {
     react: {
