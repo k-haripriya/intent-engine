@@ -62,5 +62,22 @@
     "total": "Total",
     "active": "Active",
     "trips": "Trips"
+  },
+  "birthday": {
+    "title": "Birthday Reminders",
+    "subtitle": "Never miss a special day again",
+    "relationship": "Relationship",
+    "countdown": "In {{count}} days",
+    "todaybday": "Today's Birthdays",
+    "extraspl": "Make this day extra special",
+    "upcoming": "Upcoming Birthdays",
+    "sendwish": "Send wishes",
+    "listView": "List View",
+    "calendarView": "Calendar View"
+  },
+  "common": {
+    "today": "Today",
+    "call": "Call",
+    "message": "Message"
   }
 }

@@ -3,6 +3,7 @@ export type RootStackParamList = {
   Walkthrough: undefined;
   HomeDrawer: undefined;
   Login: undefined;
+  BirthdayReminders: undefined;
 };
 
 export type DrawerParamList = {

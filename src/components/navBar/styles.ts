@@ -8,7 +8,9 @@ import FontStyles from '../../styles/fontStyles';
 export const createStyles = (Colors: ThemeColors) =>
   StyleSheet.create({
     backBtn: {
-      width: Dimensions.n(40),
+      backgroundColor: Colors.blurbg,
+      padding: Dimensions.n(4),
+      borderRadius: Dimensions.n(8),
     },
     container: {
       backgroundColor: Colors.primary,
@@ -21,11 +23,16 @@ export const createStyles = (Colors: ThemeColors) =>
     subTitle: {
       color: Colors.primaryText,
       marginTop: Dimensions.nn(5),
-      width: Dimensions.n(250),
       ...FontStyles.montserratM10,
     },
     title: {
       color: Colors.primaryText,
       ...FontStyles.CourgetteR16,
+    },
+    titleContainer: {
+      maxWidth: Dimensions.nn(200),
+    },
+    textCenter: {
+      textAlign: 'center',
     },
   });

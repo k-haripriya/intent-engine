@@ -1,13 +1,17 @@
-import { View, Text, ListRenderItem, TouchableOpacity } from 'react-native';
-import React from 'react';
+import { View, Text, TouchableOpacity, ListRenderItemInfo } from 'react-native';
+import React, { FC } from 'react';
 import { CardItem } from '../HomeScreeen';
 import LinearGradient from 'react-native-linear-gradient';
 import { styles } from './styles';
 import Dimensions from '../../../theme/Dimensions';
 import RightArrow from '../../../assets/icons/RightArrow.svg';
 
-const FeatureCard: ListRenderItem<CardItem> = props => {
-  const { item } = props;
+interface FeatureCardProps extends ListRenderItemInfo<CardItem> {
+  navigateToFeatures: () => void;
+  iconFill: string;
+}
+const FeatureCard: FC<FeatureCardProps> = props => {
+  const { item, navigateToFeatures, iconFill } = props;
   const MainItemIcon = item.mainIcon;
   const BgImage = item.bgImage;
   return (
@@ -21,8 +25,15 @@ const FeatureCard: ListRenderItem<CardItem> = props => {
           <View style={styles.itemIconContainer}>
             <MainItemIcon width={Dimensions.n(20)} height={Dimensions.n(20)} />
           </View>
-          <TouchableOpacity style={styles.arrowView}>
-            <RightArrow width={Dimensions.n(15)} height={Dimensions.n(15)} />
+          <TouchableOpacity
+            style={styles.arrowView}
+            onPress={navigateToFeatures}
+          >
+            <RightArrow
+              width={Dimensions.n(15)}
+              height={Dimensions.n(15)}
+              fill={iconFill}
+            />
           </TouchableOpacity>
         </View>
         <View style={styles.detailsView}>
@@ -44,6 +55,7 @@ const FeatureCard: ListRenderItem<CardItem> = props => {
               <cardItem.icon
                 width={Dimensions.n(24)}
                 height={Dimensions.n(24)}
+                fill={iconFill}
               />
               <View style={styles.infoDetailView}>
                 <Text style={styles.infoValue}>{cardItem.value}</Text>

@@ -3,13 +3,12 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { createStyles } from './styles';
 import { useTheme } from '../../context/ThemeProvider';
 import NavBar from '../../components/navBar/NavBar';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import SettingsIcon from '../../assets/icons/Settings.svg';
 import Dimensions from '../../theme/Dimensions';
 import { useTranslation } from 'react-i18next';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
 import { useNavigation } from '@react-navigation/native';
-import { DrawerParamList } from '../../navigation/types';
+import { DrawerParamList, RootStackScreenProps } from '../../navigation/types';
 import { getString } from '../../storage/storage';
 import { STORAGE_CONSTANTS } from '../../storage/storageConstants';
 import Loader from '../../components/loader/Loader';
@@ -31,7 +30,8 @@ import Luggage from '../../assets/icons/Luggage.svg';
 import Airplane from '../../assets/icons/Airplane.svg';
 import Travel from '../../assets/icons/Travel.svg';
 import FeatureCard from './featureCard/FeatureCard';
-import { gradientColors } from '../../theme/colors';
+import { commonColors, gradientColors } from '../../theme/colors';
+import { ROUTES } from '../../navigation/routes';
 
 type DrawerNav = DrawerNavigationProp<DrawerParamList, 'HomeScreen'>;
 export interface CardInfo {
@@ -51,11 +51,10 @@ export interface CardItem {
   bgImage: React.ComponentType<any>;
 }
 
-const HomeScreeen = () => {
+const HomeScreeen = ({ navigation }: RootStackScreenProps<'Login'>) => {
   const { colors, isDark } = useTheme();
-  const navigation = useNavigation<DrawerNav>();
+  const drawernavigation = useNavigation<DrawerNav>();
   const styles = useMemo(() => createStyles(colors), [colors]);
-  const insets = useSafeAreaInsets();
   const { t } = useTranslation();
 
   const [isShowLoader, setIsShowLoader] = useState(false);
@@ -177,7 +176,11 @@ const HomeScreeen = () => {
   };
 
   const openDrawer = () => {
-    navigation.openDrawer();
+    drawernavigation.openDrawer();
+  };
+
+  const navigateToFeatures = () => {
+    navigation.navigate(ROUTES.BIRTHDAY_REMINDERS);
   };
 
   const renderSettingsIcon = () => {
@@ -196,9 +199,7 @@ const HomeScreeen = () => {
   }
 
   return (
-    <View
-      style={[styles.container, { paddingTop: insets.top + Dimensions.n(10) }]}
-    >
+    <View style={styles.container}>
       <StatusBar
         barStyle={isDark ? 'light-content' : 'dark-content'}
         backgroundColor={colors.primary}
@@ -211,7 +212,13 @@ const HomeScreeen = () => {
       />
       <FlatList
         data={cardDetails}
-        renderItem={FeatureCard}
+        renderItem={props => (
+          <FeatureCard
+            {...props}
+            navigateToFeatures={navigateToFeatures}
+            iconFill={commonColors.white}
+          />
+        )}
         keyExtractor={item => item.cardName}
         numColumns={2}
         contentContainerStyle={styles.listContainer}

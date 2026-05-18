@@ -62,5 +62,22 @@
     "total": "कुल",
     "active": "सक्रिय",
     "trips": "यात्राएँ"
+  },
+  "birthday": {
+    "title": "जन्मदिन अनुस्मारक",
+    "subtitle": "फिर कभी कोई विशेष दिन न चूकें",
+    "relationship": "रिश्ता",
+    "countdown": "{{count}} दिनों में",
+    "todaybday": "आज के जन्मदिन",
+    "extraspl": "इस दिन को और भी खास बनाएं",
+    "upcoming": "आने वाले जन्मदिन",
+    "sendwish": "विश्वासगणना भेजें ",
+    "listView": "सूची दृश्य",
+    "calendarView": "कैलेंडर दृश्य"
+  },
+  "common": {
+    "today": "आज",
+    "call": "कॉल करें",
+    "message": "संदेश"
   }
 }
