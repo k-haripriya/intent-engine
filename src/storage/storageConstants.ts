@@ -4,4 +4,5 @@ export const STORAGE_CONSTANTS = {
   USER_ID: 'user_id',
   USER_NAME: 'user_name',
   USER_EMAIL: 'user_email',
+  WIDGET_UPCOMING_BIRTHDAYS: 'widget_upcoming_birthdays',
 };

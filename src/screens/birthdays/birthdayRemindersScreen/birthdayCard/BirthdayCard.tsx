@@ -1,23 +1,23 @@
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 import React, { FC, useMemo } from 'react';
-import { UpcomingBirthday } from '../listView/ListView';
-import { useTheme } from '../../../context/ThemeProvider';
 import { createStyles } from './styles';
-import Calendar from '../../../assets/icons/Schedule.svg';
-import Dimensions from '../../../theme/Dimensions';
-import { commonStyles } from '../../../styles/common';
-import { birthdayCardColors } from '../../../theme/colors';
-import Call from '../../../assets/icons/Call.svg';
-import Message from '../../../assets/icons/Message.svg';
+import Calendar from '../../../../assets/icons/Schedule.svg';
+import Dimensions from '../../../../theme/Dimensions';
+import { commonStyles } from '../../../../styles/common';
+import { birthdayCardColors } from '../../../../theme/colors';
+import Call from '../../../../assets/icons/Call.svg';
+import Message from '../../../../assets/icons/Message.svg';
 import { useTranslation } from 'react-i18next';
+import { BirthdayData } from '../../../../api/responseTypes';
+import { useTheme } from '../../../../context/ThemeProvider';
 
 interface Props {
-  item: UpcomingBirthday;
+  item: BirthdayData;
   index: number;
 }
 const BirthdayCard: FC<Props> = props => {
   const { item, index } = props;
-  const { name, relationship, image, remainingdays, birthday } = item;
+  const { name, relationship, profile_photo, days_remaining, dob } = item;
   const { colors } = useTheme();
   const { t } = useTranslation();
   const styles = useMemo(() => createStyles(colors), [colors]);
@@ -33,7 +33,7 @@ const BirthdayCard: FC<Props> = props => {
               { backgroundColor: activeColor.statusText },
             ]}
           >
-            <Image source={{ uri: image }} style={styles.profile} />
+            <Image source={{ uri: profile_photo }} style={styles.profile} />
           </View>
           <View style={styles.gap2}>
             <Text style={styles.name}>{name}</Text>
@@ -44,7 +44,7 @@ const BirthdayCard: FC<Props> = props => {
                 fill={colors.secondary}
                 stroke={colors.secondary}
               />
-              <Text style={styles.bday}>{birthday}</Text>
+              <Text style={styles.bday}>{dob}</Text>
             </View>
             <Text style={styles.text}>
               {t('birthday.relationship')}: {relationship}
@@ -55,8 +55,8 @@ const BirthdayCard: FC<Props> = props => {
           style={[styles.actionBtns, { backgroundColor: activeColor.buttonBg }]}
         >
           <Text style={[styles.text, { color: activeColor.statusText }]}>
-            {remainingdays > 0
-              ? t('birthday.countdown', { count: remainingdays })
+            {days_remaining > 0
+              ? t('birthday.countdown', { count: days_remaining })
               : t('common.today')}
           </Text>
         </View>

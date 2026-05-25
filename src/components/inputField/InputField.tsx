@@ -1,4 +1,4 @@
-import { View, Text, TextInput } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 import React, { FC, useEffect, useState } from 'react';
 import { useTheme } from '../../context/ThemeProvider';
 import { createStyles } from './styles';
@@ -7,6 +7,9 @@ import Animated, {
   useAnimatedStyle,
   withTiming,
 } from 'react-native-reanimated';
+import { KEYBOARD_TYPE } from '../../constants/AppConstants';
+import Dimensions from '../../theme/Dimensions';
+import { commonStyles } from '../../styles/common';
 
 interface Props {
   value: string;
@@ -16,6 +19,13 @@ interface Props {
   label: string;
   isError?: boolean;
   errorText?: string;
+  keyboardType?: KEYBOARD_TYPE;
+  Icon?: React.ComponentType<any>;
+  iconFill?: string;
+  iconBg?: string;
+  isTextArea?: boolean;
+  isActionComponent?: boolean;
+  handleAction?: () => void;
 }
 const InputField: FC<Props> = props => {
   const {
@@ -26,6 +36,13 @@ const InputField: FC<Props> = props => {
     label,
     isError,
     errorText,
+    keyboardType,
+    Icon,
+    iconFill,
+    iconBg,
+    isTextArea,
+    isActionComponent,
+    handleAction,
   } = props;
   const { colors } = useTheme();
   const styles = createStyles(colors);
@@ -50,7 +67,19 @@ const InputField: FC<Props> = props => {
     };
   });
   return (
-    <View style={styles.inputContainer}>
+    <TouchableOpacity
+      style={[
+        styles.inputContainer,
+        Icon && styles.iconContainerView,
+        isTextArea && commonStyles.flexStart,
+      ]}
+      disabled={!isActionComponent}
+      onPress={() => {
+        if (handleAction) {
+          handleAction();
+        }
+      }}
+    >
       {value && (
         <Animated.View style={[styles.labelView, animatedLabelStyle]}>
           <Animated.Text
@@ -60,15 +89,32 @@ const InputField: FC<Props> = props => {
           </Animated.Text>
         </Animated.View>
       )}
+      {Icon && (
+        <View
+          style={[styles.iconBg, { backgroundColor: iconBg ? iconBg : '' }]}
+        >
+          <Icon
+            width={Dimensions.n(16)}
+            height={Dimensions.n(16)}
+            fill={iconFill}
+          />
+        </View>
+      )}
       <TextInput
-        style={[styles.textInput, isError && styles.errorView]}
+        style={[
+          isError && styles.errorView,
+          Icon ? styles.iconTextInput : styles.textInput,
+          isTextArea && styles.textArea,
+        ]}
         placeholderTextColor={placeHolderTextColor || colors.primaryText}
         placeholder={placeholder}
         value={value}
         onChangeText={setValue}
+        keyboardType={keyboardType || 'default'}
+        editable={!isActionComponent}
       />
       {isError && <Text style={styles.errorText}>* {errorText}</Text>}
-    </View>
+    </TouchableOpacity>
   );
 };
 

@@ -1,9 +1,9 @@
 import { StyleSheet } from 'react-native';
-import { ThemeColors } from '../../../theme/colors';
-import { SPACING } from '../../../theme/spacing';
-import { commonStyles } from '../../../styles/common';
-import FontStyles from '../../../styles/fontStyles';
-import Dimensions from '../../../theme/Dimensions';
+import { ThemeColors } from '../../../../theme/colors';
+import { SPACING } from '../../../../theme/spacing';
+import { commonStyles } from '../../../../styles/common';
+import FontStyles from '../../../../styles/fontStyles';
+import Dimensions from '../../../../theme/Dimensions';
 
 export const createStyles = (colors: ThemeColors) =>
   StyleSheet.create({

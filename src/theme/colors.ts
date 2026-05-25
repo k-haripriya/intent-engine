@@ -45,6 +45,7 @@ export const darkColors = {
 export const commonColors = {
   white: '#fff',
   whitebg: 'rgba(255,255,255,0.3)',
+  blurBg: 'rgba(110, 110, 110, 0.3)',
 };
 
 export const gradientColors = {

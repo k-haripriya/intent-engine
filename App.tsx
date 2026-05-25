@@ -7,6 +7,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { commonStyles } from './src/styles/common';
 import './src/localization/i18n';
 import './src/api';
+import QueryProvider from './src/context/QueryProvider';
 
 const App = () => {
   useEffect(() => {
@@ -14,11 +15,13 @@ const App = () => {
   }, []);
   return (
     <GestureHandlerRootView style={commonStyles.flex1}>
-      <SafeAreaProvider>
-        <ThemeProvider>
-          <RootNavigator />
-        </ThemeProvider>
-      </SafeAreaProvider>
+      <QueryProvider>
+        <SafeAreaProvider>
+          <ThemeProvider>
+            <RootNavigator />
+          </ThemeProvider>
+        </SafeAreaProvider>
+      </QueryProvider>
     </GestureHandlerRootView>
   );
 };

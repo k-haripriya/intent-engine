@@ -1,7 +1,9 @@
+import Dimensions from './Dimensions';
+
 export const SPACING = {
-  XS: 4,
-  SM: 8,
-  MD: 16,
-  LG: 24,
-  XL: 40,
+  XS: Dimensions.n(4),
+  SM: Dimensions.n(8),
+  MD: Dimensions.n(16),
+  LG: Dimensions.n(24),
+  XL: Dimensions.n(40),
 };

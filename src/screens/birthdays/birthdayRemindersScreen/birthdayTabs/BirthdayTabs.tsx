@@ -1,11 +1,11 @@
 import { View, Text, TouchableOpacity } from 'react-native';
 import React, { FC, useMemo } from 'react';
-import { useTheme } from '../../../context/ThemeProvider';
+import { useTheme } from '../../../../context/ThemeProvider';
 import { createStyles } from './styles';
-import { BIRTHDAY_TABS } from '../../../constants/AppConstants';
-import List from '../../../assets/icons/list.svg';
-import Calendar from '../../../assets/icons/Schedule.svg';
-import Dimensions from '../../../theme/Dimensions';
+import { BIRTHDAY_TABS } from '../../../../constants/AppConstants';
+import List from '../../../../assets/icons/list.svg';
+import Calendar from '../../../../assets/icons/Schedule.svg';
+import Dimensions from '../../../../theme/Dimensions';
 import { useTranslation } from 'react-i18next';
 
 interface Props {

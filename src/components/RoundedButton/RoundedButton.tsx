@@ -1,4 +1,5 @@
 import {
+  ActivityIndicator,
   StyleProp,
   Text,
   TextStyle,
@@ -14,14 +15,19 @@ interface Props {
   onPress: () => void;
   style?: StyleProp<ViewStyle>;
   textStyle?: StyleProp<TextStyle>;
+  isLoading?: boolean;
 }
 const RoundedButton: FC<Props> = props => {
-  const { title, onPress, style, textStyle } = props;
+  const { title, onPress, style, textStyle, isLoading } = props;
   const { colors } = useTheme();
   const styles = createStyles(colors);
   return (
     <TouchableOpacity style={[styles.container, style]} onPress={onPress}>
-      <Text style={[styles.btnTitle, textStyle]}>{title}</Text>
+      {isLoading ? (
+        <ActivityIndicator size="small" color={colors.primary} />
+      ) : (
+        <Text style={[styles.btnTitle, textStyle]}>{title}</Text>
+      )}
     </TouchableOpacity>
   );
 };

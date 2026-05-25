@@ -6,7 +6,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import WalkthroughScreen from '../screens/walkThroughScreen/WalkThroughScreen';
 import DrawerNavigator from './drawerNavigation/Drawernavigator';
 import LoginScreen from '../screens/loginScreen/LoginScreen';
-import BirthdayRemindersScreen from '../screens/birthdayRemindersScreen/BirthdayRemindersScreen';
+import AddBirthdayScreen from '../screens/birthdays/addBirthdayScreen/AddBirthdayScreen';
+import BirthdayRemindersScreen from '../screens/birthdays/birthdayRemindersScreen/BirthdayRemindersScreen';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -16,7 +17,7 @@ const RootNavigator = () => {
       <Stack.Navigator
         screenOptions={{
           headerShown: false,
-          animation: 'fade',
+          animation: 'slide_from_right',
         }}
         initialRouteName={ROUTES.HOMEDRAWER}
       >
@@ -26,6 +27,10 @@ const RootNavigator = () => {
         <Stack.Screen
           name={ROUTES.BIRTHDAY_REMINDERS}
           component={BirthdayRemindersScreen}
+        />
+        <Stack.Screen
+          name={ROUTES.ADD_BIRTHDAY}
+          component={AddBirthdayScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>

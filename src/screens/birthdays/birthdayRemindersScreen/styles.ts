@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
-import { ThemeColors } from '../../theme/colors';
-import Dimensions from '../../theme/Dimensions';
-import { commonStyles } from '../../styles/common';
+import { ThemeColors } from '../../../theme/colors';
+import Dimensions from '../../../theme/Dimensions';
+import { commonStyles } from '../../../styles/common';
 
 export const createStyles = (colors: ThemeColors) =>
   StyleSheet.create({

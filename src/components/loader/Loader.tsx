@@ -12,7 +12,7 @@ const Loader = () => {
   const { t } = useTranslation();
   const styles = useMemo(() => createStyles(colors), [colors]);
   return (
-    <Modal onDismiss={() => {}}>
+    <Modal onDismiss={() => {}} animationType="fade">
       <View style={styles.container}>
         <LottieView
           autoPlay
