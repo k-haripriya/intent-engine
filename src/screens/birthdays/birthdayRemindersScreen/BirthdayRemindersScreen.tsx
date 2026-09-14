@@ -1,4 +1,4 @@
-import { View, TouchableOpacity, Text } from 'react-native';
+import { View, TouchableOpacity } from 'react-native';
 import React, { useEffect, useMemo, useState } from 'react';
 import NavBar from '../../../components/navBar/NavBar';
 import { RootStackScreenProps } from '../../../navigation/types';
@@ -59,7 +59,7 @@ const BirthdayRemindersScreen = ({
       case BIRTHDAY_TABS.LIST:
         return <ListView data={birthdays?.data || []} />;
       case BIRTHDAY_TABS.CALENDAR:
-        return <CalendarView />;
+        return <CalendarView data={birthdays?.data || []} />;
     }
   };
 

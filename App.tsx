@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import { startTriggerEngine } from './src/core/engine/triggerEngine';
+import React from 'react';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import RootNavigator from './src/navigation/Stacknavigator';
 import { ThemeProvider } from './src/context/ThemeProvider';
@@ -10,9 +9,6 @@ import './src/api';
 import QueryProvider from './src/context/QueryProvider';
 
 const App = () => {
-  useEffect(() => {
-    startTriggerEngine();
-  }, []);
   return (
     <GestureHandlerRootView style={commonStyles.flex1}>
       <QueryProvider>

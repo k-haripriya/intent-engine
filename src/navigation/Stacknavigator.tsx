@@ -8,6 +8,7 @@ import DrawerNavigator from './drawerNavigation/Drawernavigator';
 import LoginScreen from '../screens/loginScreen/LoginScreen';
 import AddBirthdayScreen from '../screens/birthdays/addBirthdayScreen/AddBirthdayScreen';
 import BirthdayRemindersScreen from '../screens/birthdays/birthdayRemindersScreen/BirthdayRemindersScreen';
+import { WidgetPreviewScreen } from '../widgets/WigetPreviewScree';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -31,6 +32,10 @@ const RootNavigator = () => {
         <Stack.Screen
           name={ROUTES.ADD_BIRTHDAY}
           component={AddBirthdayScreen}
+        />
+        <Stack.Screen
+          name={ROUTES.WIDGET_PREVIEW}
+          component={WidgetPreviewScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>

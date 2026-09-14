@@ -69,7 +69,7 @@ const ListView: FC<Props> = props => {
           renderItem={({ item, index }) => (
             <BirthdayCard item={item} index={index} />
           )}
-          keyExtractor={item => item.name}
+          keyExtractor={item => item.id.toString()}
           scrollEnabled={false}
         />
       </View>

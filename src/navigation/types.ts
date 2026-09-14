@@ -5,6 +5,7 @@ export type RootStackParamList = {
   Login: undefined;
   BirthdayReminders: undefined;
   AddBirthday: undefined;
+  WidgetPreview: undefined;
 };
 
 export type DrawerParamList = {
